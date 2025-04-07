@@ -34,6 +34,11 @@ public class EmployeeRegisterController {
         return employeeRegisterService.registerEmployee(registerEmployeeRequest);
     }
 
+    @GetMapping("/search")
+    public RegisterEmployeeResponse searchEmployee(@RequestBody RegisterEmployeeRequest registerEmployeeRequest){
+        return null;
+    }
+
     @PutMapping("/update")
     public RegisterEmployeeResponse updateEmployee(@RequestBody RegisterEmployeeRequest registerEmployeeRequest){
         return employeeRegisterService.registerEmployee(registerEmployeeRequest);
