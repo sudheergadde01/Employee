@@ -39,4 +39,8 @@ public class EmployeeRegisterController {
         return null;
     }
 
+    @PutMapping("/update")
+    public RegisterEmployeeResponse updateEmployee(@RequestBody RegisterEmployeeRequest registerEmployeeRequest){
+        return employeeRegisterService.registerEmployee(registerEmployeeRequest);
+    }
 }
