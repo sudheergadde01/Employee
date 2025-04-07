@@ -4,10 +4,7 @@ import com.practice.employee.request.RegisterEmployeeRequest;
 import com.practice.employee.response.RegisterEmployeeResponse;
 import com.practice.employee.service.EmployeeRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/employee")
@@ -35,6 +32,11 @@ public class EmployeeRegisterController {
     @PostMapping("/register")
     public RegisterEmployeeResponse registerEmployee(@RequestBody RegisterEmployeeRequest registerEmployeeRequest){
         return employeeRegisterService.registerEmployee(registerEmployeeRequest);
+    }
+
+    @GetMapping("/search")
+    public RegisterEmployeeResponse searchEmployee(@RequestBody RegisterEmployeeRequest registerEmployeeRequest){
+        return null;
     }
 
 }
